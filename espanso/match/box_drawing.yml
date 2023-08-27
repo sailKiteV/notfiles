@@ -1,0 +1,49 @@
+# === Box Drawing ===
+# some box drawing characters (there are more, i'm just too lazy)
+
+matches:
+
+  # box drawing chars
+  - trigger: ";bxul"
+    replace: "┌"
+    label:   "Box Drawing: (┌) upper/top left corner"
+  
+  - trigger: ";bxur"
+    replace: "┐"
+    label:   "Box Drawing: (┐) upper/top right corner"
+  
+  - trigger: ";bxll"
+    replace: "└"
+    label:   "Box Drawing: (└) lower/bottom left corner"
+  
+  - trigger: ";bxlr"
+    replace: "┘"
+    label:   "Box Drawing: (┘) lower/bottom right corner"
+  
+  - trigger: ";bxh"
+    replace: "─"
+    label:   "Box Drawing: (─) horizontal line"
+  
+  - trigger: ";bxv"
+    replace: "│"
+    label:   "Box Drawing: (│) vertical line"
+  
+  - trigger: ";bxsteml"
+    replace: "┤"
+    label:   "Box Drawing: (┤) vertical with left stem"
+  
+  - trigger: ";bxstemr"
+    replace: "├"
+    label:   "Box Drawing: (├) vertical with right stem"
+  
+  - trigger: ";bxstemu"
+    replace: "┴"
+    label:   "Box Drawing: (┴) horizontal with upper/top stem"
+  
+  - trigger: ";bxstemd"
+    replace: "┬"
+    label:   "Box Drawing: (┬) horizontal with lower/bottom stem"
+  
+  - trigger: ";bxcross"
+    replace: "┼"
+    label:   "Box Drawing: (┼) crossed horizontal and vertical"

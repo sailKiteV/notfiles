@@ -1,0 +1,92 @@
+# === Obsidian Discord Quick Shares ===
+# a bunch of links and text expansions for
+# helping people on the Obsidian Member Group
+# Discord server, for the software
+# [Obsidian](https://obsidian.md)
+
+matches:
+  # Obsidian Style Settings quick share link
+  - trigger: ";obsistyse"
+    replace: "<https://obsidian.md/plugins?id=obsidian-style-settings>"
+    label: "Obsidian Style Settings."
+
+  # Obsidian multi column quick share links
+  - trigger: ";obsicol"
+    replace: |
+      > [Multi-Column Markdown](<https://obsidian.md/plugins?id=multi-column-markdown>)
+      > [Obsidian Columns](<https://obsidian.md/plugins?id=obsidian-columns>)
+      > [efemkay's modular CSS](<https://github.com/efemkay/obsidian-modular-css-layout>)
+    label: "Obsidian multi-column formatting quick links."
+
+  # Obsidian file tree quick share links
+  - trigger: ";obsitree"
+    replace: |
+      > [File Tree Alternative](<https://obsidian.md/plugins?id=file-tree-alternative>)
+      > [Custom Sort](<https://obsidian.md/plugins?id=custom-sort>)
+      > [Obsidian Bartender](<https://github.com/nothingislost/obsidian-bartender>)
+      > [MAKE.md](<https://obsidian.md/plugins?id=make-md>)
+    label: "Obsidian file tree plugin quick links."
+
+  # Obsidian translation quick share links
+  - trigger: ";obsitransl"
+    replace: |
+      > [Translate](<https://obsidian.md/plugins?id=translate>)
+      > [Translator](<https://obsidian.md/plugins?id=obsidian-translator>)
+      > [Language Translator](<https://obsidian.md/plugins?id=language-translator>)
+    label: "Obsidian translation plugin quick links."
+
+  # Obsidian ITS callouts quick links
+  - trigger: ";obsiitscall"
+    replace: |
+      > Guide: <https://publish.obsidian.md/slrvb-docs/ITS+Theme/Callout+Adjustments>
+      > Snippet: <https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Callouts.css>
+    label: "Obsidian ITS callouts quick links."
+
+  # Obsidian ITS embed adjustment quick links
+  - trigger: ";obsiitsembed"
+    replace: |
+      > Guide: <https://publish.obsidian.md/slrvb-docs/ITS+Theme/Embed+Adjustments>
+      > Snippet: <https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Embed%20Adjustments.css>
+    label: "Obsidian ITS embed adjustment quick links."
+
+  # Obsidian ITS image adjustment quick links
+  - trigger: ";obsiitsimage"
+    replace: |
+      > Guide: <https://publish.obsidian.md/slrvb-docs/ITS+Theme/Image+Adjustments>
+      > Snippet: <https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Snippets/S%20-%20Images%20Adjustments.css>$|$
+    label: "Obsidian ITS image adjustment quick links."
+
+  # Obsidian help site format your notes
+  - trigger: ";obsiform"
+    replace: "<https://help.obsidian.md/How+to/Format+your+notes>"
+    label: "Link to Obsidian help site for formatting notes (Markdown, etc.)"
+
+  # Obsidian help site internal links
+  - trigger: ";obsilink"
+    replace: "<https://help.obsidian.md/Linking+notes+and+files/Internal+links>"
+    label: "Link to Obsidian help site for internal links."
+
+  # Obsidian bug reports
+  - trigger: ";obsibug"
+    replace: "<https://forum.obsidian.md/c/bug-reports/7>"
+    label: "Link to bug report forum for Obsidian."
+
+  # Obsidian feature requests
+  - trigger: ";obsifeat"
+    replace: "<https://forum.obsidian.md/c/feature-requests/8>"
+    label: "Link to feature request forum for Obsidian."
+
+  # Obsidian inline title off
+  - trigger: ";obsiinlineoff"
+    replace: "`Options -> Appearance -> Advanced -> Show inline title -> OFF`"
+
+  # Markdown basic syntax
+  - trigger: ";learnmd"
+    replace: |
+      ### Markdown Resources
+      - [Obsidian Basic Formatting](<https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax>) | Learn many of the basics of Markdown in Obsidian.
+      - [Markdown Guide](<https://www.markdownguide.org/basic-syntax>) | Learn more about how Markdown renders various elements by syntax.
+      - [CommonMark Spec](<https://spec.commonmark.org/current/>) | One of the more detailed specifications for Markdown (as a reference).
+      - [GFM Spec](<https://github.github.com/gfm/>) | Specification for GitHub Flavored Markdown; based on CommonMark.
+      - [Canadian Government of Northwest Territories, Justice Dept.](<https://www.justice.gov.nt.ca/en/docs/markdown/page/3/>) | Surprisingly concise resource for learning about loose lists, don't ask me why.
+    label: "Learn Markdown syntax."

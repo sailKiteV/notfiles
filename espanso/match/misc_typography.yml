@@ -1,0 +1,58 @@
+# === Misc. Typography ===
+# a bunch of little matches for typographical and other symbols
+
+matches:
+
+  # minor typography
+  - trigger: ";en"
+    replace: "–"
+    label:   "Typography: (–) En dash"
+
+  - trigger: ";em"
+    replace: "—"
+    label:   "Typography: (—) Em dash"
+  
+  - trigger: ";. "
+    replace: "→ "
+    label:   "Typography: (→ ) Short right arrow with space after"
+  
+  - trigger: ";, "
+    replace: "← "
+    label:   "Typography: (← ) Short left arrow with space after"
+
+  - trigger: ";.. "
+    replace: "⟶ "
+    label:   "Typography: (⟶ ) Long right arrow with space after"
+  
+  - trigger: ";,, "
+    replace: "⟵ "
+    label:   "Typography: (⟵ ) Short left arrow with space after"
+
+  - trigger: ";braille "
+    replace: "\u2800"
+    label:   "Typography: ( ) Braille space (for crimes against .md)"
+
+  # double combining chars
+  - trigger: ";over2breve"
+    replace: "\u035d"
+    label:   "o͝o (Unicode combining char)"
+
+  - trigger: ";over2macron"
+    replace: "\u035e"
+    label:   "o͞o (Unicode combining char)"
+
+  - trigger: ";over2tilde"
+    replace: "\u0360"
+    label:   "o͠o (Unicode combining char)"
+
+  - trigger: ";over2invbreve"
+    replace: "\u0361"
+    label:   "o͡o (Unicode combining char)"
+
+  - trigger: ";undr2breve"
+    replace: "\u035c"
+    label:   "o͜o (Unicode combining char)"
+
+  - trigger: ";undr2macron"
+    replace: "\u035f"
+    label:   "o͟o (Unicode combining char)"

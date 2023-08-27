@@ -1,0 +1,469 @@
+# === Alchemical Unicode Symbols ===
+# just for fun, really
+# block U+1F700–U+1F77F
+
+matches:
+
+  - trigger: ";alquint"
+    replace: "🜀"
+    label:   "Alchemy: (🜀) Quintessence"
+
+  - trigger: ";alair"
+    replace: "🜁"
+    label:   "Alchemy: (🜁) Air"
+
+  - trigger: ";alfire"
+    replace: "🜂"
+    label:   "Alchemy: (🜂) Fire"
+
+  - trigger: ";alearth"
+    replace: "🜃"
+    label:   "Alchemy: (🜃) Earth"
+
+  - trigger: ";alwat"
+    replace: "🜄"
+    label:   "Alchemy: (🜄) Water"
+
+  - trigger: ";alaqfort"
+    replace: "🜅"
+    label:   "Alchemy: (🜅) Aquafortis"
+
+  - trigger: ";alaqreg1"
+    replace: "🜆"
+    label:   "Alchemy: (🜆) Aqua Regia"
+
+  - trigger: ";alaqreg2"
+    replace: "🜇"
+    label:   "Alchemy: (🜇) Aqua Regia 2"
+
+  - trigger: ";alaqvit1"
+    replace: "🜈"
+    label:   "Alchemy: (🜈) Aqua Vitae"
+
+  - trigger: ";alaqvit2"
+    replace: "🜉"
+    label:   "Alchemy: (🜉) Aqua Vitae 2"
+
+  - trigger: ";alvineg1"
+    replace: "🜊"
+    label:   "Alchemy: (🜊) Vinegar"
+
+  - trigger: ";alvineg2"
+    replace: "🜋"
+    label:   "Alchemy: (🜋) Vinegar 2"
+
+  - trigger: ";alvineg3"
+    replace: "🜌"
+    label:   "Alchemy: (🜌) Vinegar 3"
+
+  - trigger: ";alnsulf"
+    replace: "🜍"
+    label:   "Alchemy: (🜍) Sulfur"
+
+  - trigger: ";alpsulf"
+    replace: "🜎"
+    label:   "Alchemy: (🜎) Philosophers Sulfur"
+
+  - trigger: ";albsulf"
+    replace: "🜏"
+    label:   "Alchemy: (🜏) Black Sulfur"
+
+  - trigger: ";almercsub1"
+    replace: "🜐"
+    label:   "Alchemy: (🜐) Mercury Sublimate"
+
+  - trigger: ";almercsub2"
+    replace: "🜑"
+    label:   "Alchemy: (🜑) Mercury Sublimate 2"
+
+  - trigger: ";almercsub3"
+    replace: "🜒"
+    label:   "Alchemy: (🜒) Mercury Sublimate 3"
+
+  - trigger: ";alcinn"
+    replace: "🜓"
+    label:   "Alchemy: (🜓) Cinnabar"
+
+  - trigger: ";alsalt"
+    replace: "🜔"
+    label:   "Alchemy: (🜔) Salt"
+
+  - trigger: ";alnitre"
+    replace: "🜕"
+    label:   "Alchemy: (🜕) Nitre"
+
+  - trigger: ";alvitriol1"
+    replace: "🜖"
+    label:   "Alchemy: (🜖) Vitriol"
+
+  - trigger: ";alvitriol2"
+    replace: "🜗"
+    label:   "Alchemy: (🜗) Vitriol 2"
+
+  - trigger: ";alrsalt1"
+    replace: "🜘"
+    label:   "Alchemy: (🜘) Rock Salt"
+
+  - trigger: ";alrsalt2"
+    replace: "🜙"
+    label:   "Alchemy: (🜙) Rock Salt 2"
+
+  - trigger: ";algold"
+    replace: "🜚"
+    label:   "Alchemy: (🜚) Gold"
+
+  - trigger: ";alsilv"
+    replace: "🜛"
+    label:   "Alchemy: (🜛) Silver"
+
+  - trigger: ";aliron1"
+    replace: "🜜"
+    label:   "Alchemy: (🜜) Iron Ore"
+
+  - trigger: ";aliron2"
+    replace: "🜝"
+    label:   "Alchemy: (🜝) Iron Ore 2"
+
+  - trigger: ";alcrociron"
+    replace: "🜞"
+    label:   "Alchemy: (🜞) Crocus of Iron"
+
+  - trigger: ";alregiron"
+    replace: "🜟"
+    label:   "Alchemy: (🜟) Regulus of Iron"
+
+  - trigger: ";alcoppo"
+    replace: "🜠"
+    label:   "Alchemy: (🜠) Copper Ore"
+
+  - trigger: ";alironcopp"
+    replace: "🜡"
+    label:   "Alchemy: (🜡) Iron-Copper Ore"
+
+  - trigger: ";alsubcopp"
+    replace: "🜢"
+    label:   "Alchemy: (🜢) Sublimate of Copper"
+
+  - trigger: ";alcroccopp1"
+    replace: "🜣"
+    label:   "Alchemy: (🜣) Crocus of Copper"
+
+  - trigger: ";alcroccopp2"
+    replace: "🜤"
+    label:   "Alchemy: (🜤) Crocus of Copper 2"
+
+  - trigger: ";alcoppanti"
+    replace: "🜥"
+    label:   "Alchemy: (🜥) Antimoniate"
+
+  - trigger: ";alscoppanti"
+    replace: "🜦"
+    label:   "Alchemy: (🜦) Salt of Copper Antimoniate"
+
+  - trigger: ";alsubscopp"
+    replace: "🜧"
+    label:   "Alchemy: (🜧) Sublimate of Salt of Copper"
+
+  - trigger: ";alverdi"
+    replace: "🜨"
+    label:   "Alchemy: (🜨) Verdigris"
+
+  - trigger: ";altin"
+    replace: "🜩"
+    label:   "Alchemy: (🜩) Tin Ore"
+
+  - trigger: ";allead"
+    replace: "🜪"
+    label:   "Alchemy: (🜪) Lead Ore"
+
+  - trigger: ";alanti"
+    replace: "🜫"
+    label:   "Alchemy: (🜫) Antimony Ore"
+
+  - trigger: ";alsubanti"
+    replace: "🜬"
+    label:   "Alchemy: (🜬) Sublimate of Antimony"
+
+  - trigger: ";alsanti"
+    replace: "🜭"
+    label:   "Alchemy: (🜭) Salt of Antimony"
+
+  - trigger: ";alsubsanti"
+    replace: "🜮"
+    label:   "Alchemy: (🜮) Sublimate of Salt of Antimony"
+
+  - trigger: ";alvineganti"
+    replace: "🜯"
+    label:   "Alchemy: (🜯) Vinegar of Antimony"
+
+  - trigger: ";alreganti1"
+    replace: "🜰"
+    label:   "Alchemy: (🜰) Regulus of Antimony"
+
+  - trigger: ";alreganti2"
+    replace: "🜱"
+    label:   "Alchemy: (🜱) Regulus of Antimony 2"
+
+  - trigger: ";alregu1"
+    replace: "🜲"
+    label:   "Alchemy: (🜲) Regulus"
+
+  - trigger: ";alregu2"
+    replace: "🜳"
+    label:   "Alchemy: (🜳) Regulus 2"
+
+  - trigger: ";alregu3"
+    replace: "🜴"
+    label:   "Alchemy: (🜴) Regulus 3"
+
+  - trigger: ";alregu4"
+    replace: "🜵"
+    label:   "Alchemy: (🜵) Regulus 4"
+
+  - trigger: ";alalkali1"
+    replace: "🜶"
+    label:   "Alchemy: (🜶) Alkali"
+
+  - trigger: ";alalkali2"
+    replace: "🜷"
+    label:   "Alchemy: (🜷) Alkali 2"
+
+  - trigger: ";almarca"
+    replace: "🜸"
+    label:   "Alchemy: (🜸) Marcasite"
+
+  - trigger: ";alsalammo"
+    replace: "🜹"
+    label:   "Alchemy: (🜹) Sal-Ammoniac"
+
+  - trigger: ";alarsen"
+    replace: "🜺"
+    label:   "Alchemy: (🜺) Arsenic"
+
+  - trigger: ";alrealg1"
+    replace: "🜻"
+    label:   "Alchemy: (🜻) Realgar"
+
+  - trigger: ";alrealg2"
+    replace: "🜼"
+    label:   "Alchemy: (🜼) Realgar 2"
+
+  - trigger: ";alaurip"
+    replace: "🜽"
+    label:   "Alchemy: (🜽) Auripigment"
+
+  - trigger: ";albism"
+    replace: "🜾"
+    label:   "Alchemy: (🜾) Bismuth Ore"
+
+  - trigger: ";altart1"
+    replace: "🜿"
+    label:   "Alchemy: (🜿) Tartar"
+
+  - trigger: ";altart2"
+    replace: "🝀"
+    label:   "Alchemy: (🝀) Tartar 2"
+
+  - trigger: ";alquickl"
+    replace: "🝁"
+    label:   "Alchemy: (🝁) Quick Lime"
+
+  - trigger: ";alborax1"
+    replace: "🝂"
+    label:   "Alchemy: (🝂) Borax"
+
+  - trigger: ";alborax2"
+    replace: "🝃"
+    label:   "Alchemy: (🝃) Borax 2"
+
+  - trigger: ";alborax3"
+    replace: "🝄"
+    label:   "Alchemy: (🝄) Borax 3"
+
+  - trigger: ";alalum"
+    replace: "🝅"
+    label:   "Alchemy: (🝅) Alum"
+
+  - trigger: ";aloil"
+    replace: "🝆"
+    label:   "Alchemy: (🝆) Oil"
+
+  - trigger: ";alspirit"
+    replace: "🝇"
+    label:   "Alchemy: (🝇) Spirit"
+
+  - trigger: ";altinct"
+    replace: "🝈"
+    label:   "Alchemy: (🝈) Tincture"
+
+  - trigger: ";algum"
+    replace: "🝉"
+    label:   "Alchemy: (🝉) Gum"
+
+  - trigger: ";alwax"
+    replace: "🝊"
+    label:   "Alchemy: (🝊) Wax"
+
+  - trigger: ";alpowder"
+    replace: "🝋"
+    label:   "Alchemy: (🝋) Powder"
+
+  - trigger: ";alcalx"
+    replace: "🝌"
+    label:   "Alchemy: (🝌) Calx"
+
+  - trigger: ";altutty"
+    replace: "🝍"
+    label:   "Alchemy: (🝍) Tutty"
+
+  - trigger: ";alcapmort"
+    replace: "🝎"
+    label:   "Alchemy: (🝎) Caput Mortuum"
+
+  - trigger: ";alscepter"
+    replace: "🝏"
+    label:   "Alchemy: (🝏) Scepter of Jove"
+
+  - trigger: ";alcaduc"
+    replace: "🝐"
+    label:   "Alchemy: (🝐) Caduceus"
+
+  - trigger: ";altrident"
+    replace: "🝑"
+    label:   "Alchemy: (🝑) Trident"
+
+  - trigger: ";alstartrid"
+    replace: "🝒"
+    label:   "Alchemy: (🝒) Starred Trident"
+
+  - trigger: ";allodestone"
+    replace: "🝓"
+    label:   "Alchemy: (🝓) Lodestone"
+
+  - trigger: ";alsoap"
+    replace: "🝔"
+    label:   "Alchemy: (🝔) Soap"
+
+  - trigger: ";alurine"
+    replace: "🝕"
+    label:   "Alchemy: (🝕) Urine"
+
+  - trigger: ";aldung"
+    replace: "🝖"
+    label:   "Alchemy: (🝖) Horse Dung"
+
+  - trigger: ";alashes"
+    replace: "🝗"
+    label:   "Alchemy: (🝗) Ashes"
+
+  - trigger: ";alpotashes"
+    replace: "🝘"
+    label:   "Alchemy: (🝘) Pot Ashes"
+
+  - trigger: ";albrick"
+    replace: "🝙"
+    label:   "Alchemy: (🝙) Brick"
+
+  - trigger: ";alpowbrick"
+    replace: "🝚"
+    label:   "Alchemy: (🝚) Powdered Brick"
+
+  - trigger: ";alamalg"
+    replace: "🝛"
+    label:   "Alchemy: (🝛) Amalgam"
+
+  - trigger: ";alstrat1"
+    replace: "🝜"
+    label:   "Alchemy: (🝜) Stratum Super Stratum"
+
+  - trigger: ";alstrat2"
+    replace: "🝝"
+    label:   "Alchemy: (🝝) Stratum Super Stratum 2"
+
+  - trigger: ";alsubl"
+    replace: "🝞"
+    label:   "Alchemy: (🝞) Sublimation"
+
+  - trigger: ";alprec"
+    replace: "🝟"
+    label:   "Alchemy: (🝟) Precipitate"
+
+  - trigger: ";aldist"
+    replace: "🝠"
+    label:   "Alchemy: (🝠) Distill"
+
+  - trigger: ";aldiss1"
+    replace: "🝡"
+    label:   "Alchemy: (🝡) Dissolve"
+
+  - trigger: ";aldiss2"
+    replace: "🝢"
+    label:   "Alchemy: (🝢) Dissolve 2"
+
+  - trigger: ";alpurify"
+    replace: "🝣"
+    label:   "Alchemy: (🝣) Purify"
+
+  - trigger: ";alputre"
+    replace: "🝤"
+    label:   "Alchemy: (🝤) Putrefaction"
+
+  - trigger: ";alcruci1"
+    replace: "🝥"
+    label:   "Alchemy: (🝥) Crucible"
+
+  - trigger: ";alcruci2"
+    replace: "🝦"
+    label:   "Alchemy: (🝦) Crucible 2"
+
+  - trigger: ";alcruci3"
+    replace: "🝧"
+    label:   "Alchemy: (🝧) Crucible 3"
+
+  - trigger: ";alcruci4"
+    replace: "🝨"
+    label:   "Alchemy: (🝨) Crucible 4"
+
+  - trigger: ";alcruci5"
+    replace: "🝩"
+    label:   "Alchemy: (🝩) Crucible 5"
+
+  - trigger: ";alalembic"
+    replace: "🝪"
+    label:   "Alchemy: (🝪) Alembic"
+
+  - trigger: ";albathmary"
+    replace: "🝫"
+    label:   "Alchemy: (🝫) Bath of Mary"
+
+  - trigger: ";albathvapo"
+    replace: "🝬"
+    label:   "Alchemy: (🝬) Bath of Vapours"
+
+  - trigger: ";alretort"
+    replace: "🝭"
+    label:   "Alchemy: (🝭) Retort"
+
+  - trigger: ";alhour"
+    replace: "🝮"
+    label:   "Alchemy: (🝮) Hour"
+
+  - trigger: ";alnight"
+    replace: "🝯"
+    label:   "Alchemy: (🝯) Night"
+
+  - trigger: ";aldaynight"
+    replace: "🝰"
+    label:   "Alchemy: (🝰) Day-Night"
+
+  - trigger: ";almonth"
+    replace: "🝱"
+    label:   "Alchemy: (🝱) Month"
+
+  - trigger: ";alhalfdram"
+    replace: "🝲"
+    label:   "Alchemy: (🝲) Half Dram"
+
+  - trigger: ";alhalfounce"
+    replace: "🝳"
+    label:   "Alchemy: (🝳) Half Ounce"

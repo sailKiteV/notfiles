@@ -1,0 +1,34 @@
+# === Espanso Meta-Sequences ===
+# meta sequences for writing Espanso stuff faster
+
+matches:
+  - trigger: ";trg"
+    replace: "- trigger: \"$|$\""
+    label:   "Quick YAML trigger key for new Espanso matches."
+
+  - trigger: ";rpl"
+    replace: "  replace: \"$|$\""
+    label:   "Quick YAML replace key for new Espanso matches."
+
+  - trigger: ";matform"
+    replace: "- trigger: \"{{form.trg}}\"\n  replace: \"{{form.rpl}}\""
+    label: "Quick YAML form for simple matches."
+    vars:
+      - name: form
+        type: form
+        params:
+          layout: |
+            Trigger: [[trg]]
+            Replace: [[rpl]]
+
+  - trigger: ";matwlabel"
+    replace: "- trigger: \"{{form.trg}}\"\n  replace: \"{{form.rpl}}\"\nlabel:   \"{{form.lbl}}\""
+    label: "Quick YAML form for simple matches, with label."
+    vars:
+      - name: form
+        type: form
+        params:
+          layout: |
+            Trigger: [[trg]]
+            Replace: [[rpl]]
+            Label:   [[lbl]]

@@ -1,0 +1,33 @@
+# === Quick Markdown Formatting ===
+# some matches for doing Markdown stuff
+# on Discord and a little bit in Obsidian
+
+matches:
+  # tilde codeblocks for Obsidian / Markdown
+  - trigger: ";3td"
+    replace: "~~~$|$\n~~~"
+    label:   "Fenced tilde code block with cursor in position to add language identifier"
+
+  # backtick codeblocks for Discord
+  - trigger: ";3bt"
+    replace: "```$|$\n```"
+    label:   "Fenced backtick code block with cursor in position to add language identifier"
+
+  # quick css codeblock for Discord
+  - trigger: ";css;"
+    replace: "```css\n$|$\n```"
+    label:   "Fenced CSS code block with cursor ready"
+
+  # CSS snippet paster for Discord
+  - trigger: ";cssp"
+    force_clipboard: true
+    replace: "```css\n{{paste}}\n```"
+    label:   "Fenced CSS code block with snippet pasted inside"
+    vars:
+      - name: "paste"
+        type: "clipboard"
+  
+  # quick angle brackets for Discord
+  - trigger: ";ang;"
+    replace: "<$|$>"
+    label:   "Quick angle brackets (for Discord)."

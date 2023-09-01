@@ -1,4 +1,4 @@
-﻿#Requires AutoHotkey v2.0
+﻿#Requires AutoHotkey v2.0+
 #SingleInstance
 #Include "%A_ScriptDir%"
 #Include "obsidian_menu.ahk"
@@ -169,6 +169,12 @@ for char in lowerAlpha {
 ; o͟o
 :*T0?:;undr2macron::{U+035f}
 
+; zero width non-joiner
+:*T0?:;zwnj::{U+200C}
+
+; zero width joiner
+:*T0?:;zwj::{U+200D}
+
 ; === Discord pasting stuff ===
 
 ; tilde fenced code, cursor ready to add language identifier
@@ -249,6 +255,17 @@ for char in lowerAlpha {
 
     HotPaste(text)
 }
+
+; === Obsidian community plugin pastes
+:*T?:;advuri::[Advanced URI](<https://obsidian.md/plugins?id=obsidian-advanced-uri>)
+
+:*T?:;dataview::[Dataview](<https://obsidian.md/plugins?id=dataview>)
+
+:*T?:;templ::[Templater](<https://obsidian.md/plugins?id=templater-obsidian>)
+
+:*T?:;quickadd::[QuickAdd](<https://obsidian.md/plugins?id=quickadd>)
+
+; === Discord Navigation and Functionality ===
 
 ; Discord fast reply to most recent message
 :*?:;qr:: {

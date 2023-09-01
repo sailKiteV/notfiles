@@ -21,7 +21,7 @@ ObsiMenu := BetterMenu([
             [],
             ["1. &Readable line length", (*) => PrintSetting("Settings -> Editor -> Readable line length -> ")],
             ["2. &Strict line breaks", (*) => PrintSetting("Settings -> Editor -> Strict line breaks -> ")],
-            ["3. Show file &properties", (*) => PrintSetting("Settings -> Editor -> Show file properties -> ")],
+            ["3. &Properties in document", (*) => PrintSetting("Settings -> Editor -> Properties in document -> ")],
             ["4. Show line &number", (*) => PrintSetting("Settings -> Editor -> Show line number -> ")],
             ["5. Show &indentation guides", (*) => PrintSetting("Settings -> Editor -> Show indentation guides -> ")]
         ]],
@@ -53,9 +53,9 @@ ObsiMenu := BetterMenu([
         ]]
 	]],
     ["&Link a resource", [
-        ["1. &Markdown Syntax", (*) => SendInput("{Raw}[Markdown syntax](<https://www.markdownguide.org/basic-syntax/>)")],
-        ["2. &Format Your Notes", (*) => SendInput("{Raw}[formatting your notes](<https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax>)")],
-        ["3. &Learn about links", (*) => SendInput("{Raw}[links](<https://help.obsidian.md/Linking+notes+and+files/Internal+links>)")]
+        ["1. &Markdown Syntax", (*) => SendText("[Markdown syntax](<https://www.markdownguide.org/basic-syntax/>)")],
+        ["2. &Format Your Notes", (*) => SendText("[formatting your notes](<https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax>)")],
+        ["3. &Learn about links", (*) => SendText("[links](<https://help.obsidian.md/Linking+notes+and+files/Internal+links>)")]
     ]]
 ])
 

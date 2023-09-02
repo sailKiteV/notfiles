@@ -1,8 +1,10 @@
 ﻿#Requires AutoHotkey v2.0+
 #SingleInstance
 #Include "%A_ScriptDir%"
-#Include "obsidian_menu.ahk"
+#Include "functions.ahk"
 #Include "box_drawing.ahk"
+#Include "obsidian_menu.ahk"
+#Include "obsidian_pastes_large.ahk"
 
 ; === link pasting stuff ===
 
@@ -32,67 +34,6 @@
     params := SubStr(A_Clipboard, 23)
     A_Clipboard := "https://obsidian.md/plugins" . params
     mdlank()
-}
-
-; === functions ===
-Sanitize(str) {
-    sanitized := StrReplace(str, "+", "{NumpadAdd}")
-    sanitized := StrReplace(sanitized, "#", "+{3}")
-
-    return sanitized
-}
-
-HotPaste(text) {
-    current := A_Clipboard
-    left := 0
-    Sleep(25)
-    ; process $|$ cursor hint (Espanso-like)
-    A_Clipboard := ""
-    Loop parse, StrReplace(text, "$|$", "⏏"), "⏏" {
-        if(A_Index > 1)
-            left := StrLen(A_LoopField)
-        A_Clipboard := A_Clipboard . A_LoopField
-    }
-    SendInput("^v" . "{Left " . left . "}")
-    Sleep(25)
-    A_Clipboard := current
-    Sleep(25)
-    current := ""
-}
-
-WrapWith(left, right?) {
-    if(!IsSet(right)){
-        right := left
-    }
-    current := A_Clipboard
-    Sleep(25)
-    SendInput("^c")
-    Sleep(25)
-    HotPaste(
-        left
-        . A_Clipboard
-        . right
-    )
-    A_Clipboard := current
-}
-
-CharReplace(charMap) {
-    out := ""
-    current := A_Clipboard
-    Sleep(25)
-    SendInput("^c")
-    Sleep(25)
-    Loop parse, A_Clipboard, "" {
-        if(charMap.Has(A_LoopField)) {
-            ch := charMap[A_LoopField]
-        }
-        else {
-            ch := A_LoopField
-        }
-        out := out . ch
-    }
-    HotPaste(out)
-    A_Clipboard := current
 }
 
 lowerAlpha := ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
@@ -217,45 +158,6 @@ for char in lowerAlpha {
     )
 }
 
-; === big pastes, mostly Obsidian-related ===
-
-:*T0?:;pmdb:: {
-    text := "
-    (
-    ### Markdown Resources
-    - [Obsidian Basic Formatting](<https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax>) | Learn many of the basics of Markdown in Obsidian.
-    - [Markdown Guide](<https://www.markdownguide.org/basic-syntax>) | Learn more about how Markdown renders various elements by syntax.
-    )"
-
-    HotPaste(text)
-}
-; full Markdown resources
-:*T0?:;pmdf:: {
-    text := "
-    (
-    ### Markdown Resources
-    - [Obsidian Basic Formatting](<https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax>) | Learn many of the basics of Markdown in Obsidian.
-    - [Markdown Guide](<https://www.markdownguide.org/basic-syntax>) | Learn more about how Markdown renders various elements by syntax.
-    - [CommonMark Spec](<https://spec.commonmark.org/current/>) | One of the more detailed specifications for Markdown (as a reference).
-    - [GFM Spec](<https://github.github.com/gfm/>) | Specification for GitHub Flavored Markdown; based on CommonMark.
-    - [Canadian Government of Northwest Territories, Justice Dept.](<https://www.justice.gov.nt.ca/en/docs/markdown/page/3/>) | Surprisingly concise resource for learning about loose lists, don't ask me why.
-    )"
-
-    HotPaste(text)
-}
-
-; Demonstration of Markdown link and Wikilink syntaxes
-:*T0?:;lnks:: {
-    text := "
-    (
-    > Markdown: ``[link text](target)``
-    > Wikilink: ``[[target|link text]]``
-    > - [Reference](<https://help.obsidian.md/Linking+notes+and+files/Internal+links>) 
-    )"
-
-    HotPaste(text)
-}
-
 ; === Obsidian community plugin pastes
 :*T?:;advuri::[Advanced URI](<https://obsidian.md/plugins?id=obsidian-advanced-uri>)
 
@@ -264,6 +166,8 @@ for char in lowerAlpha {
 :*T?:;templ::[Templater](<https://obsidian.md/plugins?id=templater-obsidian>)
 
 :*T?:;quickadd::[QuickAdd](<https://obsidian.md/plugins?id=quickadd>)
+
+:*T?:;styset::[Style Settings](<https://obsidian.md/plugins?id=obsidian-style-settings>)
 
 ; === Discord Navigation and Functionality ===
 

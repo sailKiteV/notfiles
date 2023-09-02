@@ -1,6 +1,8 @@
-; enable directives if not importing
-; #Requires AutoHotkey v2.0
+; enable directives if not including in another script
+; #Requires AutoHotkey v2.0+
 ; #SingleInstance
+; #Include "%A_ScripDir%"
+; #Include "functions.ahk"
 
 ; === big funny Obsidian-related menu thing ===
 

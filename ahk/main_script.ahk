@@ -46,17 +46,15 @@ for char in lowerAlpha {
 
 ; === text wrapping and replacement ===
 
-; wrap selection in angle brackets
-!#,:: {
+!#,:: { ; wrap selection in angle brackets
     WrapWith("<", ">")
 }
 
-; wrap selection in single backticks
-!#.:: {
+!#.:: { ; wrap selection in single backticks
     WrapWith("``")
 }
 
-!#w::CharReplace(whisperMap)
+!#w::CharReplace(whisperMap) ; replace selection with whisper chars
 
 ; === a bunch of basic replacements ===
 
@@ -189,11 +187,9 @@ for char in lowerAlpha {
     SendInput("{NumpadAdd}")
 }
 
-; AHKv2 Help file
-!#a::WinExist("AutoHotkey v2 Help") ? WinActivate("AutoHotkey v2 Help") : Run("C:/Program Files/AutoHotkey/v2/AutoHotkey.chm")
+!#a::WinExist("AutoHotkey v2 Help") ? WinActivate("AutoHotkey v2 Help") : Run("C:/Program Files/AutoHotkey/v2/AutoHotkey.chm") ; AHKv2 Help file
 
-; Obsidian Quick Plugin Search
-!#p:: {
+!#p:: { ; Obsidian Quick Plugin Search
     if(WinExist("ahk_exe obsidian.exe")) {
         Run("obsidian://show-plugin?id=%20")
         Sleep(100)
@@ -207,8 +203,9 @@ for char in lowerAlpha {
     alchGUI := Gui(,"Unicode Alchemy",)
 
     alchText := ["Quintessence (🜀)","Air (🜁)","Fire (🜂)","Earth (🜃)","Water (🜄)","Aquafortis (🜅)","Aqua Regia (🜆)","Aqua Regia 2 (🜇)","Aqua Vitae (🜈)","Aqua Vitae 2 (🜉)","Vinegar (🜊)","Vinegar 2 (🜋)","Vinegar 3 (🜌)","Sulfur (🜍)","Philosophers Sulfur (🜎)","Black Sulfur (🜏)","Mercury Sublimate (🜐)","Mercury Sublimate 2 (🜑)","Mercury Sublimate 3 (🜒)","Cinnabar (🜓)","Salt (🜔)","Nitre (🜕)","Vitriol (🜖)","Vitriol 2 (🜗)","Rock Salt (🜘)","Rock Salt 2 (🜙)","Gold (🜚)","Silver (🜛)","Iron Ore (🜜)","Iron Ore 2 (🜝)","Crocus of Iron (🜞)","Regulus of Iron (🜟)","Copper Ore (🜠)","Iron-Copper Ore (🜡)","Sublimate of Copper (🜢)","Crocus of Copper (🜣)","Crocus of Copper 2 (🜤)","Antimoniate (🜥)","Salt of Copper Antimoniate (🜦)","Sublimate of Salt of Copper (🜧)","Verdigris (🜨)","Tin Ore (🜩)","Lead Ore (🜪)","Antimony Ore (🜫)","Sublimate of Antimony (🜬)","Salt of Antimony (🜭)","Sublimate of Salt of Antimony (🜮)","Vinegar of Antimony (🜯)","Regulus of Antimony (🜰)","Regulus of Antimony 2 (🜱)","Regulus (🜲)","Regulus 2 (🜳)","Regulus 3 (🜴)","Regulus 4 (🜵)","Alkali (🜶)","Alkali 2 (🜷)","Marcasite (🜸)","Sal-Ammoniac (🜹)","Arsenic (🜺)","Realgar (🜻)","Realgar 2 (🜼)","Auripigment (🜽)","Bismuth Ore (🜾)","Tartar (🜿)","Tartar 2 (🝀)","Quick Lime (🝁)","Borax (🝂)","Borax 2 (🝃)","Borax 3 (🝄)","Alum (🝅)","Oil (🝆)","Spirit (🝇)","Tincture (🝈)","Gum (🝉)","Wax (🝊)","Powder (🝋)","Calx (🝌)","Tutty (🝍)","Caput Mortuum (🝎)","Scepter of Jove (🝏)","Caduceus (🝐)","Trident (🝑)","Starred Trident (🝒)","Lodestone (🝓)","Soap (🝔)","Urine (🝕)","Horse Dung (🝖)","Ashes (🝗)","Pot Ashes (🝘)","Brick (🝙)","Powdered Brick (🝚)","Amalgam (🝛)","Stratum Super Stratum (🝜)","Stratum Super Stratum 2 (🝝)","Sublimation (🝞)","Precipitate (🝟)","Distill (🝠)","Dissolve (🝡)","Dissolve 2 (🝢)","Purify (🝣)","Putrefaction (🝤)","Crucible (🝥)","Crucible 2 (🝦)","Crucible 3 (🝧)","Crucible 4 (🝨)","Crucible 5 (🝩)","Alembic (🝪)","Bath of Mary (🝫)","Bath of Vapours (🝬)","Retort (🝭)","Hour (🝮)","Night (🝯)","Day-Night (🝰)","Month (🝱)","Half Dram (🝲)","Half Ounce (🝳)"]
+    alchRef := &alchText
 
-    alchDDL := alchGUI.AddListBox("V:alchDDL Choose1 R8 W200 Sort",alchText)
+    alchDDL := alchGUI.AddListBox("V:alchDDL Choose1 R8 W200 Sort",%alchRef%)
     alchSubmit := alchGui.AddButton("default W200","Submit")
 
     alchSubmit.OnEvent("Click", SendAlchChar)
@@ -221,3 +218,84 @@ for char in lowerAlpha {
     }
     alchGUI.Show()
 }
+
+; ======================================= ;
+; HIGHLY EXPERIMENTAL SECTION VERY W.I.P. ;
+; ======================================= ;
+
+!#h::MsgBox(foundHotkeys)
+
+thisFile := FileRead(A_ScriptFullPath)
+hotkeyMatchExpr := "xm)^([^:\n]*?)::[^;]*?(;.*)?$"
+hotkeyIndex := 1
+foundHotkeys := ""
+while (RegExMatch(thisFile, hotkeyMatchExpr, &matchedHotkey, hotkeyIndex)) {
+    foundHotkeys := foundHotkeys . (hotkeyIndex == 1 ? "" :"`n") . matchedHotkey[1] . " | " . matchedHotkey[2]
+    hotkeyIndex := matchedHotkey.Pos + StrLen(matchedHotkey[0])
+}
+
+includedInFile := GetThisAndIncludedFiles(A_ScriptFullPath)
+
+!#f:: {
+    output := ""
+    for file in includedInFile
+        output := output . file . "`n"
+
+    MsgBox(output)
+}
+
+GetThisAndIncludedFiles(path) {
+    fileContents := FileRead(path)
+    included := []
+
+    includedMatch := "m)^#Include `"(.*)`"$"
+    includedIndex := 1
+
+    while (RegExMatch(fileContents, includedMatch, &includedFile, includedIndex)) {
+        included.Push(includedFile[1])
+        includedIndex := includedFile.Pos + StrLen(includedFile[0])
+    }
+
+    return included
+}
+
+NumberFromUnicode(unicodeString) {
+    numberString := SubStr(unicodeString, 3)
+    digits := StrSplit(numberString)
+    power := 0
+    output := 0
+
+    while(digits.Length > 0) {
+        value := 0
+        digit := digits.Pop()
+        switch digit, 0 {
+            case "f": value := 15
+            case "e": value := 14
+            case "d": value := 13
+            case "c": value := 12
+            case "b": value := 11
+            case "a": value := 10
+                
+            default: value := Number(digit)
+        }
+        output += value*16**power
+        power++
+    }
+
+    return output
+}
+
+CreateUnicodeCharArray(startPoint, endPoint) {
+    currentCode := NumberFromUnicode(startPoint)
+    finalCode := NumberFromUnicode(endPoint)
+    output := []
+
+    while(currentCode <= finalCode) {
+        output.Push(Chr(currentCode))
+        currentCode++
+    }
+
+    return output
+}
+
+!#q::MsgBox(CreateUnicodeCharArray("U+1F700", "U+1F77F")[3])

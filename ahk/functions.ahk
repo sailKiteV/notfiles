@@ -31,6 +31,26 @@ HotPaste(text) {
 }
 
 /**
+ * Uses the clipboard for sending large amounts of text quickly.
+ * Will optionally look for an Espanso-style cursor hint `$|$`.
+ * 
+ * @param text The text to be sent.
+ */
+HotTextThenHint(text) {
+    output := ""
+    left := 0
+    ; process $|$ cursor hint (Espanso-like)
+    Loop parse, StrReplace(text, "$|$", "⏏"), "⏏" {
+        if(A_Index > 1)
+            left := StrLen(A_LoopField)
+        output := output . A_LoopField
+    }
+    SendText(output)
+    SendInput("{Left " . left . "}")
+    current := ""
+}
+
+/**
  * Small sketchy function for sanitizing certain characters in URLs.
  * 
  * @param str The string to sanitize.

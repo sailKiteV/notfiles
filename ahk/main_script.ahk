@@ -89,6 +89,9 @@ for char in lowerAlpha {
 ; Typography: ( ) Braille space (for crimes against .md)
 :*T0?:;braille ::⠀
 
+; Typograph: ( ) no-break space (for crimes against .md)
+:*T0?:;nbsp::{U+00a0}
+
 ; some double combining chars
 ; o͝o
 :*T0?:;over2breve::{U+035d}
@@ -108,11 +111,17 @@ for char in lowerAlpha {
 ; o͟o
 :*T0?:;undr2macron::{U+035f}
 
+; zero width space
+:*T0?:;zwsp::{U+200B}
+
 ; zero width non-joiner
 :*T0?:;zwnj::{U+200C}
 
 ; zero width joiner
 :*T0?:;zwj::{U+200D}
+
+; word joiner
+:*T0?:;wj::{U+2060}
 
 ; === Discord pasting stuff ===
 
@@ -137,7 +146,7 @@ for char in lowerAlpha {
 }
 
 ; css fence, cursor ready inside
-:*T0?:;css;:: {
+:*T0?Z:;css;:: {
     HotPaste("
         (
         ``````css
@@ -147,7 +156,21 @@ for char in lowerAlpha {
     )
 }
 
-; make css fence with clipbard contents inside, cursor at end
+:*T0?:;cllt:: {
+    SendText(".callout[data-callout=`"`"]")
+    Sleep(10)
+    SendInput("{Left 2}")
+}
+
+:*?Z:;tag;:: { ; generate and insert paired HTML tags, with cursor between
+    KeyWait(";")
+
+    if (ib := InputBox(, "HTML Tag", "W200 H70")).result = "OK"
+        Sleep(30)
+        HotTextThenHint(format("<{1}>$|$</{1}>", ib.Value))
+}
+
+; make css fence with clipboard contents inside, cursor at end
 :*T0?:;cssp:: {
     HotPaste(
         "``````css`n"
@@ -155,6 +178,9 @@ for char in lowerAlpha {
         . "`n``````"
     )
 }
+
+; string for referring to "Paste as plain text"
+:*T?:;pasteas::``Ctrl+Shift+V`` / ``Paste as plain text`` 
 
 ; === Obsidian community plugin pastes
 :*T?:;advuri::[Advanced URI](<https://obsidian.md/plugins?id=obsidian-advanced-uri>)
@@ -166,6 +192,8 @@ for char in lowerAlpha {
 :*T?:;quickadd::[QuickAdd](<https://obsidian.md/plugins?id=quickadd>)
 
 :*T?:;styset::[Style Settings](<https://obsidian.md/plugins?id=obsidian-style-settings>)
+
+:*T?:;brat::[BRAT](<https://obsidian.md/plugins?id=obsidian42-brat>)
 
 ; === Discord Navigation and Functionality ===
 
@@ -200,23 +228,23 @@ for char in lowerAlpha {
 ; === Unicode Alchemy  ===
 
 :*T0?:;alch:: {
-    alchGUI := Gui(,"Unicode Alchemy",)
+    alchGui := Gui(,"Unicode Alchemy",)
 
     alchText := ["Quintessence (🜀)","Air (🜁)","Fire (🜂)","Earth (🜃)","Water (🜄)","Aquafortis (🜅)","Aqua Regia (🜆)","Aqua Regia 2 (🜇)","Aqua Vitae (🜈)","Aqua Vitae 2 (🜉)","Vinegar (🜊)","Vinegar 2 (🜋)","Vinegar 3 (🜌)","Sulfur (🜍)","Philosophers Sulfur (🜎)","Black Sulfur (🜏)","Mercury Sublimate (🜐)","Mercury Sublimate 2 (🜑)","Mercury Sublimate 3 (🜒)","Cinnabar (🜓)","Salt (🜔)","Nitre (🜕)","Vitriol (🜖)","Vitriol 2 (🜗)","Rock Salt (🜘)","Rock Salt 2 (🜙)","Gold (🜚)","Silver (🜛)","Iron Ore (🜜)","Iron Ore 2 (🜝)","Crocus of Iron (🜞)","Regulus of Iron (🜟)","Copper Ore (🜠)","Iron-Copper Ore (🜡)","Sublimate of Copper (🜢)","Crocus of Copper (🜣)","Crocus of Copper 2 (🜤)","Antimoniate (🜥)","Salt of Copper Antimoniate (🜦)","Sublimate of Salt of Copper (🜧)","Verdigris (🜨)","Tin Ore (🜩)","Lead Ore (🜪)","Antimony Ore (🜫)","Sublimate of Antimony (🜬)","Salt of Antimony (🜭)","Sublimate of Salt of Antimony (🜮)","Vinegar of Antimony (🜯)","Regulus of Antimony (🜰)","Regulus of Antimony 2 (🜱)","Regulus (🜲)","Regulus 2 (🜳)","Regulus 3 (🜴)","Regulus 4 (🜵)","Alkali (🜶)","Alkali 2 (🜷)","Marcasite (🜸)","Sal-Ammoniac (🜹)","Arsenic (🜺)","Realgar (🜻)","Realgar 2 (🜼)","Auripigment (🜽)","Bismuth Ore (🜾)","Tartar (🜿)","Tartar 2 (🝀)","Quick Lime (🝁)","Borax (🝂)","Borax 2 (🝃)","Borax 3 (🝄)","Alum (🝅)","Oil (🝆)","Spirit (🝇)","Tincture (🝈)","Gum (🝉)","Wax (🝊)","Powder (🝋)","Calx (🝌)","Tutty (🝍)","Caput Mortuum (🝎)","Scepter of Jove (🝏)","Caduceus (🝐)","Trident (🝑)","Starred Trident (🝒)","Lodestone (🝓)","Soap (🝔)","Urine (🝕)","Horse Dung (🝖)","Ashes (🝗)","Pot Ashes (🝘)","Brick (🝙)","Powdered Brick (🝚)","Amalgam (🝛)","Stratum Super Stratum (🝜)","Stratum Super Stratum 2 (🝝)","Sublimation (🝞)","Precipitate (🝟)","Distill (🝠)","Dissolve (🝡)","Dissolve 2 (🝢)","Purify (🝣)","Putrefaction (🝤)","Crucible (🝥)","Crucible 2 (🝦)","Crucible 3 (🝧)","Crucible 4 (🝨)","Crucible 5 (🝩)","Alembic (🝪)","Bath of Mary (🝫)","Bath of Vapours (🝬)","Retort (🝭)","Hour (🝮)","Night (🝯)","Day-Night (🝰)","Month (🝱)","Half Dram (🝲)","Half Ounce (🝳)"]
     alchRef := &alchText
 
-    alchDDL := alchGUI.AddListBox("V:alchDDL Choose1 R8 W200 Sort",%alchRef%)
+    alchDDL := alchGui.AddListBox("V:alchDDL Choose1 R8 W200 Sort",%alchRef%)
     alchSubmit := alchGui.AddButton("default W200","Submit")
 
     alchSubmit.OnEvent("Click", SendAlchChar)
 
     SendAlchChar(*) {
         RegExMatch(alchDDL.Text, "\((.)\)", &Submitted)
-        alchGUI.Destroy()
+        alchGui.Destroy()
         Sleep(25)
         SendText(Submitted[1])
     }
-    alchGUI.Show()
+    alchGui.Show()
 }
 
 ; ======================================= ;

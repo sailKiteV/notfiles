@@ -195,6 +195,8 @@ for char in lowerAlpha {
 
 :*T?:;brat::[BRAT](<https://obsidian.md/plugins?id=obsidian42-brat>)
 
+:*T?:;metabind::[Meta Bind](<https://obsidian.md/plugins?id=obsidian-meta-bind-plugin>)
+
 ; === Discord Navigation and Functionality ===
 
 ; Discord fast reply to most recent message

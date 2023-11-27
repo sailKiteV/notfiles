@@ -72,7 +72,7 @@
     - [Folder Notes](<https://obsidian.md/plugins?id=folder-notes>)
     - [Folder Index](<https://obsidian.md/plugins?id=obsidian-folder-index>)
     - [AidenLx's Folder Note](<https://obsidian.md/plugins?id=alx-folder-note>)
-      - requires [Folder Note Core](<https://obsidian.md/plugins?id=folder-note-core>) if i understand correctly
+      - requires [Folder Note Core](<https://obsidian.md/plugins?id=folder-note-core>)
     ### Auto-Linking
     - [Waypoint](<https://obsidian.md/plugins?id=waypoint>) (for use with AidenLx's, unsure of interaction with others)
     )"
@@ -97,4 +97,16 @@
 
 :*T0?:;obsuri:: { ; Obsidian quick link URI on help site
     HotPaste("[Obsidian URI](<https://help.obsidian.md/Concepts/Obsidian+URI>)")
+}
+
+:*T0?:;obsmjx:: { ;Obsidian MathJax quick links
+    text := "
+    (
+    - [Obsidian helpsite math section](<https://help.obsidian.md/Editing+and+formatting/Advanced+formatting+syntax#Math>)
+    - [MathJax basic tutorial and quick reference](<https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference>)
+    - [TeX Commands available in MathJax](<https://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm>)
+    - [Extensions](<https://docs.mathjax.org/en/latest/input/tex/extensions/index.html>) (not all available in Obsidian)
+    )"
+
+    HotPaste(text)
 }

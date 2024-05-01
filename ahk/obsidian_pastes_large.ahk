@@ -72,7 +72,6 @@
     - [Folder Notes](<https://obsidian.md/plugins?id=folder-notes>)
     - [Folder Index](<https://obsidian.md/plugins?id=obsidian-folder-index>)
     - [AidenLx's Folder Note](<https://obsidian.md/plugins?id=alx-folder-note>)
-      - requires [Folder Note Core](<https://obsidian.md/plugins?id=folder-note-core>)
     ### Auto-Linking
     - [Waypoint](<https://obsidian.md/plugins?id=waypoint>) (for use with AidenLx's, unsure of interaction with others)
     )"
@@ -91,15 +90,15 @@
     HotPaste(text)
 }
 
-:*T0?:;obsearch:: { ; Obsidian quick link Search on help site
+:*T0?:;obsisearch:: { ; Obsidian quick link Search on help site
     HotPaste("[Search](<https://help.obsidian.md/Plugins/Search>)")
 }
 
-:*T0?:;obsuri:: { ; Obsidian quick link URI on help site
+:*T0?:;obsiuri:: { ; Obsidian quick link URI on help site
     HotPaste("[Obsidian URI](<https://help.obsidian.md/Concepts/Obsidian+URI>)")
 }
 
-:*T0?:;obsmjx:: { ;Obsidian MathJax quick links
+:*T0?:;obsimjx:: { ;Obsidian MathJax quick links
     text := "
     (
     - [Obsidian helpsite math section](<https://help.obsidian.md/Editing+and+formatting/Advanced+formatting+syntax#Math>)
@@ -109,4 +108,12 @@
     )"
 
     HotPaste(text)
+}
+
+:*T0?:;obsicond:: { ; Obsidian quick link Community Code of Conduct
+    HotPaste("[Community Code of Conduct](<https://help.obsidian.md/Obsidian/Community+code+of+conduct>)")
+}
+
+:*T0?:;obsisnip:: { ; Obsidian quick link CSS snippets
+    HotPaste("[CSS snippet](<https://help.obsidian.md/Extending+Obsidian/CSS+snippets>)")
 }

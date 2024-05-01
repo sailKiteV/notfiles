@@ -123,6 +123,9 @@ for char in lowerAlpha {
 ; word joiner
 :*T0?:;wj::{U+2060}
 
+; diacritical ring below
+:*T0?:;ringbelow::{U+0325}
+
 ; === Discord pasting stuff ===
 
 ; tilde fenced code, cursor ready to add language identifier
@@ -197,6 +200,12 @@ for char in lowerAlpha {
 
 :*T?:;metabind::[Meta Bind](<https://obsidian.md/plugins?id=obsidian-meta-bind-plugin>)
 
+:*T?:;customsort::[Custom File Explorer sort](<https://obsidian.md/plugins?id=custom-sort>)
+
+; === Obsidian snippets pastes
+
+:*T?:;itscall::[SlRvb's Callout Adjustments](<https://publish.obsidian.md/slrvb-docs/ITS+Theme/Callout+Adjustments>)
+
 ; === Discord Navigation and Functionality ===
 
 ; Discord fast reply to most recent message
@@ -218,6 +227,8 @@ for char in lowerAlpha {
 }
 
 !#a::WinExist("AutoHotkey v2 Help") ? WinActivate("AutoHotkey v2 Help") : Run("C:/Program Files/AutoHotkey/v2/AutoHotkey.chm") ; AHKv2 Help file
+
+!#r::Reload ; reload main script
 
 !#p:: { ; Obsidian Quick Plugin Search
     if(WinExist("ahk_exe obsidian.exe")) {

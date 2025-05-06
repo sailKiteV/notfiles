@@ -23,7 +23,7 @@ HotPaste(text) {
             left := StrLen(A_LoopField)
         A_Clipboard := A_Clipboard . A_LoopField
     }
-    SendInput("^v" . "{Left " . left . "}")
+    SendInput("^+v" . "{Left " . left . "}")
     Sleep(25)
     A_Clipboard := current
     Sleep(25)

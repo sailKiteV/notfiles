@@ -44,6 +44,14 @@ for char in lowerAlpha {
     whisperMap.Set(lowerAlpha[A_Index], whisperChars[A_Index])
 }
 
+!#t:: { ; launch and/or focus Windows Terminal
+    if (!WinExist("ahk_exe wezterm-gui.exe")) {
+        RunWait('*RunAs "C:\Users\sailK\scoop\apps\wezterm\current\wezterm-gui.exe"',,"Max")
+    } else {
+        WinActivate("ahk_exe wezterm-gui.exe")
+    }
+}
+
 ; === text wrapping and replacement ===
 
 !#,:: { ; wrap selection in angle brackets
@@ -59,6 +67,8 @@ for char in lowerAlpha {
 ; === a bunch of basic replacements ===
 
 :*T?:;kams::감사합니다
+
+:*T?:;rog::"f al|ress|os re|ck ski|ine thr|ne bo|claw|l arr"
 
 :*T?:;redd::old.reddit.com/r/
 
@@ -183,7 +193,13 @@ for char in lowerAlpha {
 }
 
 ; string for referring to "Paste as plain text"
-:*T?:;pasteas::``Ctrl+Shift+V`` / ``Paste as plain text`` 
+:*T?:;pasteas::``Ctrl+Shift+V``/``Paste as plain text``
+
+; string for devtools
+:*T?:;devtools::``Ctrl+Shift+I``/``Cmd+Opt+I``
+
+; string for Obsidian file recovery
+:*T?:;recov::``Settings -> File Recovery -> Snapshots -> View``
 
 ; === Obsidian community plugin pastes
 :*T?:;advuri::[Advanced URI](<https://obsidian.md/plugins?id=obsidian-advanced-uri>)
@@ -199,6 +215,8 @@ for char in lowerAlpha {
 :*T?:;brat::[BRAT](<https://obsidian.md/plugins?id=obsidian42-brat>)
 
 :*T?:;metabind::[Meta Bind](<https://obsidian.md/plugins?id=obsidian-meta-bind-plugin>)
+
+:*T?:;jsengine::[JS Engine](<https://obsidian.md/plugins?id=js-engine>)
 
 :*T?:;customsort::[Custom File Explorer sort](<https://obsidian.md/plugins?id=custom-sort>)
 

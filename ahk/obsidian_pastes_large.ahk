@@ -10,7 +10,7 @@
     text := "
     (
     ### Markdown Resources
-    - [Obsidian Basic Formatting](<https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax>) | Learn many of the basics of Markdown in Obsidian.
+    - [Obsidian Basic Formatting](<https://help.obsidian.md/syntax>) | Learn many of the basics of Markdown in Obsidian.
     - [Markdown Guide](<https://www.markdownguide.org/basic-syntax>) | Learn more about how Markdown renders various elements by syntax.
     )"
 
@@ -116,4 +116,12 @@
 
 :*T0?:;obsisnip:: { ; Obsidian quick link CSS snippets
     HotPaste("[CSS snippet](<https://help.obsidian.md/Extending+Obsidian/CSS+snippets>)")
+}
+
+:*T0?:;obsisyn:: { ; Obsidian basic syntax link
+    HotPaste("[syntax](<https://help.obsidian.md/syntax>)")
+}
+
+:*T0?:;obsicall:: { ; Obsidian callouts link
+    HotPaste("[callout](<https://help.obsidian.md/callouts>)")
 }
